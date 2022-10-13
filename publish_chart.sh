@@ -13,6 +13,6 @@ cr upload -o $OWNER -r $REPO_NAME -p .deploy -t $GITHUB_TOKEN
 
 echo updating index
 git checkout gh-pages
-cr index -i ./index.yaml -p .deploy --owner $OWNER --git-repo $REPO_NAME
+cr index -i ./index.yaml -p .deploy --owner $OWNER --git-repo $REPO_NAME -t $GITHUB_TOKEN
 
 git push origin gh-pages
